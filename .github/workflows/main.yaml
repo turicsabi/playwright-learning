@@ -1,0 +1,5 @@
+patterns:
+  -'@smoke'
+  -'@regression'
+  -''
+  
