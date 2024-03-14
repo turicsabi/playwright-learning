@@ -2,6 +2,11 @@ name: test
 
 on:
   workflow_dispatch:
+    inputs:
+      grep:
+        description: 'Pattern to filter tests'
+        required: true
+        default: ''
   
 jobs:
   tests_e2e:
@@ -15,4 +20,4 @@ jobs:
       - name: Install playwright browsers
         run: npx playwright install --with-deps
       - name: Run tests
-        run: npx playwright test
+        run: npx playwright test --grep "${{github.event.inputs.grep}}"
