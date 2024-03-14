@@ -5,7 +5,8 @@ on:
     inputs:
       grep:
         description: 'Execute tests with the following tags:'
-        required: true  
+        required: true
+        default: '@regression'
         options: ['@smoke','@regression']
 
           
@@ -13,6 +14,11 @@ jobs:
   tests_e2e:
     name: Run end-to-end tests
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        environment: [test, preint, int]
+    
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
