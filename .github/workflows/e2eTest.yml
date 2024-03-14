@@ -6,7 +6,8 @@ on:
       grep:
         description: 'Pattern to filter tests'
         required: true
-        default: ''
+        default: '@regression'
+        options: ['smoke', '@regression', '']
   
 jobs:
   tests_e2e:
