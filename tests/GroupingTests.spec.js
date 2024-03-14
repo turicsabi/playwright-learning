@@ -22,7 +22,7 @@ test.describe('Regression',()=> {
         console.log('This is test1');
     });
 
-    test.only('test4', async({page})=>{
+    test('test4', async({page})=>{
         console.log('This is test4');
     });
 

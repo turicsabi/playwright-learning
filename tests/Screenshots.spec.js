@@ -6,7 +6,7 @@ const{test, expect}=require('@playwright/test');
 
     });
 
-    test.only('Full page screenshot', async({page})=>{
+    test('Full page screenshot', async({page})=>{
         await page.goto('https://demo.opencart.com');
         await page.screenshot({path: 'tests/screenshots/' + new Date(Date.now()).toISOString().replace(/[:\/\s]/g, '-') +'homePage.png', fullPage: true});
 
