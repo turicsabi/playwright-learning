@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Mar 11 16:11:29 EET 2024","Mon Mar 11 16:11:32 EET 2024","3014","chromium","Reports.spec.js","","","","test3",""
+"passed","Mon Mar 11 16:11:22 EET 2024","Mon Mar 11 16:11:26 EET 2024","4246","chromium","Reports.spec.js","","","","test1",""
+"passed","Mon Mar 11 16:11:26 EET 2024","Mon Mar 11 16:11:29 EET 2024","2496","chromium","Reports.spec.js","","","","test2",""
