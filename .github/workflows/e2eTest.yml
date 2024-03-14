@@ -5,7 +5,7 @@ on:
     inputs:
       grep:
         description: 'Execute tests with the following tags:'
-        required: true        
+        required: true
         options: ['@regression', '@smoke']
   
 jobs:
