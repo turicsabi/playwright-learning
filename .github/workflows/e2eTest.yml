@@ -6,7 +6,7 @@ on:
       grep:
         description: 'Execute tests with the following tags:'
         required: true        
-        options: ['@smoke', '@regression']
+        options: ${{fromJSON(needs.options.outputs.options)}}
   
 jobs:
   tests_e2e:
