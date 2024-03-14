@@ -5,11 +5,9 @@ on:
     inputs:
       grep:
         description: 'Execute tests with the following tags:'
-        required: true
-        default: '@regression'
-        options:
-          - 'smoke'
-          - 'regression'
+        required: true  
+        options: ['@smoke','@regression']
+
           
 jobs:
   tests_e2e:
