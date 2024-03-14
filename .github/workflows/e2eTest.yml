@@ -7,8 +7,10 @@ on:
         description: 'Execute tests with the following tags:'
         required: true
         default: '@regression'
-        options: ['@regression', '@smoke']
-  
+        options:
+          - 'smoke'
+          - 'regression'
+          
 jobs:
   tests_e2e:
     name: Run end-to-end tests
