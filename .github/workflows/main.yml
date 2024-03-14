@@ -20,4 +20,4 @@ jobs:
       - name: Test
         uses: ianwalter/playwright-container@43940dfa7d309fe3569b9df407ae9e84dcbf2e7f
         with:
-          args: npx playwright test --headless
+          args: npx playwright test
