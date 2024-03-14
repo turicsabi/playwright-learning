@@ -3,17 +3,17 @@ name: test
 on:
   workflow_dispatch:
     inputs:
+      environment:
+        description: 'Select the environment to execute the tests'
+        required: true
+        options: ['test', 'preint', 'int']
       grep:
         description: 'Execute tests with the following tags:'
         required: true
         default: '@regression'
         options: ['@smoke','@regression']
         
-      environment:
-        description: 'Select the environment to execute the tests'
-        required: true
-        default: '@regression'
-        options: ['test', 'preint', 'int']
+
           
 jobs:
   tests_e2e:
