@@ -17,12 +17,6 @@ on:
         required: false
         default: '@regression'
         type: string
-
-      env:
-        description: 'Select the environment to execute the tests'
-        required: true
-        type: environment
-
         
           
 jobs:
