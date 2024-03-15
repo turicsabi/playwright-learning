@@ -6,13 +6,19 @@ on:
       environment:
         description: 'Select the environment to execute the tests'
         required: true
-        options: ['test', 'preint', 'int']
+        default: 'INT'
+        options:
+          - TEST
+          - INT
+      
       grep:
         description: 'Execute tests with the following tags:'
         required: true
         default: '@regression'
-        options: ['@smoke','@regression']
-        
+        options:        
+          - '@smoke'
+          - '@regression'
+          - ''
 
           
 jobs:
