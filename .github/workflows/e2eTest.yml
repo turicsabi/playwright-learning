@@ -14,14 +14,10 @@ on:
       
       grep:
         description: 'Execute tests with the following tags:'
-        required: true
+        required: false
         default: '@regression'
-        type: environment
-        options:        
-          - '@smoke'
-          - '@regression'
-          - ''
-
+        type: string
+        
           
 jobs:
   tests_e2e:
