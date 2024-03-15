@@ -20,6 +20,15 @@ on:
           - '@regression'
           - ''
 
+      country:
+        description: 'For vse-reporting only - Country (code) '
+        required: true
+        default: 'ALL'
+        type: choice
+        options:
+          - ALL
+          - DE
+
           
 jobs:
   tests_e2e:
