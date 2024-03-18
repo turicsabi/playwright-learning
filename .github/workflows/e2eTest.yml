@@ -39,6 +39,15 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
+      - name: Setup pages
+        uses: actions/configure-pages@v2
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: playwright-report/
+      - name: deploy to github pages
+        id: deployment
+        uses: actions/deploy-pages@v1
       # - name: Allure Report with history
       #   uses: simple-elf/allure-report-action@v1.9            
       # - name: Test marketplace action
