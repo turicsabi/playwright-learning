@@ -44,6 +44,10 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: playwright-report
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
