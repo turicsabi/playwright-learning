@@ -41,6 +41,8 @@ jobs:
           retention-days: 30
       - name: Setup pages
         uses: actions/configure-pages@v2
+        with: 
+           authToken: ${{secrets.GITHUB_TOKEN}}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
