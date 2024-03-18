@@ -39,10 +39,10 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
-      - name: Setup pages
-        uses: actions/configure-pages@v3
-        with: 
-           authToken: ${{secrets.GITHUB_TOKEN}}
+      # - name: Setup pages
+      #   uses: actions/configure-pages@v3
+      #   with: 
+      #      authToken: ${{secrets.GITHUB_TOKEN}}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
