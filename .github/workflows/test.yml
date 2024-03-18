@@ -8,23 +8,27 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       
-    - name: Set uo Node.js
-      uses: actions/setup-node@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
       with:
-        node-version: '14'
+        node-version: '18'
 
     - name: Install dependencies
-      run: npm install
-      
-    # - name: Setup Chrome
-    #   uses: browser-actions/setup-chrome@v1.5.0    
-    # - name: install Playwright
-    #   run: npx playwright install  
-
-    - name: Run Playwright tests
+      run: npm ci
+    - name: Install Playwright browsers
+      run: npx playwright install --with-deps
+    - name: Run tests
       run: npx playwright test
+    - uses: action/upload-artifact@v3
+      if: always()
+      with:
+        name: playwight-report
+        path: playwight-report/
+        retention-days: 30
       
+    
+
       
       
