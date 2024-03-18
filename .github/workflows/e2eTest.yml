@@ -15,7 +15,7 @@ on:
       grep:
         description: 'Execute tests with the following tags:'
         required: false
-        default: '@regression'
+        # default: '@regression'
         type: string
         
           
