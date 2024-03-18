@@ -45,7 +45,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: playwright-report/
-      - name: deploy to github pages
+      - name: Deploy to github pages
         id: deployment
         uses: actions/deploy-pages@v1
       # - name: Allure Report with history
