@@ -54,9 +54,8 @@ jobs:
           path: playwright-report/
       - name: Deploy to github pages
         id: deployment
-        uses: actions/deploy-pages@v3
-        with: 
-          authToken: ${{secrets.GITHUB_TOKEN}}
+        uses: actions/deploy-pages@v1
+
       # - name: Allure Report with history
       #   uses: simple-elf/allure-report-action@v1.9            
       # - name: Test marketplace action
